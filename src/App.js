@@ -6,7 +6,22 @@ import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([
+    {
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BZjA4ZDJmNmQtZTA4NS00NzhmLTg2ODktZjg3MDliZmUzYTZmXkEyXkFqcGdeQXVyODEyNjEwMDk@._V1_SX300.jpg',
+      Title: 'Pushpa: The Rise - Part 1',
+      Type: 'movie',
+      Year: '2021',
+    },
+    {
+      Poster:
+        'https://m.media-amazon.com/images/M/MV5BYjUyZGY4NDQtOGE5My00M2EzLWE0ZGEtMmQwNTgxNjBmYmUxXkEyXkFqcGdeQXVyMTU4MjkxODU@._V1_SX300.jpg',
+      Title: 'MalliRaava',
+      Type: 'movie',
+      Year: '2017',
+    },
+  ]);
   const [searchValue, setSearchValue] = useState('');
 
   const getMoviesRequest = async (searchValue) => {
